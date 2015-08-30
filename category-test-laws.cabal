@@ -44,7 +44,7 @@ library
 
   build-depends:
     base >=4.6 && <5,
-    QuickCheck >=2.6 && <2.7,
+    QuickCheck >=2.6 && <2.9,
     tasty >=0.9 && <0.11,
     tasty-quickcheck >=0.8 && <0.10
   hs-source-dirs:      src
@@ -57,7 +57,7 @@ test-suite BeadTest
 
   build-Depends:
     base >=4.6 && <5,
-    QuickCheck >=2.6 && <2.7,
+    QuickCheck >=2.6 && <2.9,
     tasty >=0.9 && <0.11,
     tasty-quickcheck >=0.8 && <0.10
 
