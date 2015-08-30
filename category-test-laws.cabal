@@ -43,7 +43,7 @@ library
     Test.Category.Properties.Monad
 
   build-depends:
-    base >=4.7 && <5,
+    base >=4.6 && <5,
     QuickCheck >=2.6 && <2.7,
     tasty >=0.9 && <0.11,
     tasty-quickcheck >=0.8 && <0.10
@@ -56,7 +56,7 @@ test-suite BeadTest
     exitcode-stdio-1.0
 
   build-Depends:
-    base >=4.7 && <5,
+    base >=4.6 && <5,
     QuickCheck >=2.6 && <2.7,
     tasty >=0.9 && <0.11,
     tasty-quickcheck >=0.8 && <0.10
