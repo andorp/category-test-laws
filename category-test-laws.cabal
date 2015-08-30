@@ -11,6 +11,8 @@ version:             0.1.0.0
 
 synopsis:            Algebraic laws and quickcheck properties of haskell constructions.
 
+description:         Algebraic laws and quickcheck properties of haskell constructions.
+
 license:             BSD3
 
 license-file:        LICENSE
@@ -25,6 +27,10 @@ build-type:          Simple
 
 cabal-version:       >=1.10
 
+source-repository head
+  type:     git
+  location: https://github.com/andorp/bead/
+
 library
   exposed-modules:
     Test.Category.Hask,
@@ -37,7 +43,7 @@ library
     Test.Category.Properties.Monad
 
   build-depends:
-    base >=4.7,
+    base >=4.7 && <5,
     QuickCheck >=2.6 && <2.7,
     tasty >=0.9 && <0.10,
     tasty-quickcheck >=0.8 && <0.9
@@ -50,7 +56,7 @@ test-suite BeadTest
     exitcode-stdio-1.0
 
   build-Depends:
-    base >=4.7 && <4.8,
+    base >=4.7 && <5,
     QuickCheck >=2.6 && <2.7,
     tasty >=0.9 && <0.10,
     tasty-quickcheck >=0.8 && <0.9
