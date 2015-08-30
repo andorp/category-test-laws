@@ -37,7 +37,7 @@ library
     Test.Category.Properties.Monad
 
   build-depends:
-    base >=4.7 && <4.8,
+    base >=4.7,
     QuickCheck >=2.6 && <2.7,
     tasty >=0.9 && <0.10,
     tasty-quickcheck >=0.8 && <0.9
