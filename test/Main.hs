@@ -15,18 +15,18 @@ import Test.QuickCheck.Function
 main =
   defaultMain $ testGroup "" [
       testGroup "Functor" [
-          testProperty "Identity" $ Functor.identity int_list (==)
-        , testProperty "Composition" $ Functor.composition int_list char_to_int int_to_char (==)
+          testProperty "Identity" $ Functor.identity int_list
+        , testProperty "Composition" $ Functor.composition int_list char_to_int int_to_char
         ]
     , testGroup "Natural Transformation" [
-          testProperty "Naturality of reverse" $ NatTrans.naturality int_to_char int_list (==) reverse
+          testProperty "Naturality of reverse" $ NatTrans.naturality int_to_char int_list reverse
         ]
     , testGroup "Monad" [
-          testProperty "Eta naturality" $ Monad.etaNaturality int_to_char int char_list_eq
-        , testProperty "Mu naturality" $ Monad.muNaturality int_to_char int_list_2 (==)
-        , testProperty "Law1" $ Monad.law1 int_list_3 (==)
-        , testProperty "Law2" $ Monad.law2 int_list (==)
-        , testProperty "Law3" $ Monad.law3 int_list (==)
+          testProperty "Eta naturality" $ Monad.etaNaturalityWith int_to_char int char_list_eq
+        , testProperty "Mu naturality" $ Monad.muNaturality int_to_char int_list_2
+        , testProperty "Law1" $ Monad.law1 int_list_3
+        , testProperty "Law2" $ Monad.law2 int_list
+        , testProperty "Law3" $ Monad.law3 int_list
         ]
     ]
 
