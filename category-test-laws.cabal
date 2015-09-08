@@ -35,12 +35,15 @@ library
   exposed-modules:
     Control.Category.Hask.Functor,
     Control.Category.Hask.Definition,
+    Control.Category.Hask.Universal,
     Control.Category.Hask.Laws.Functor,
     Control.Category.Hask.Laws.NatTrans,
     Control.Category.Hask.Laws.Monad,
+    Control.Category.Hask.Laws.Universal,
     Test.Category.Properties.Functor,
     Test.Category.Properties.NatTrans,
-    Test.Category.Properties.Monad
+    Test.Category.Properties.Monad,
+    Test.Category.Properties.Universal
 
   build-depends:
     base >=4.6 && <5,
