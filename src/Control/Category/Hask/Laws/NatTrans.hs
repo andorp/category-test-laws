@@ -1,7 +1,7 @@
 {-# LANGUAGE Rank2Types #-}
-module Test.Category.Laws.NatTrans where
+module Control.Category.Hask.Laws.NatTrans where
 
-import Test.Category.Definitions (NatTrans(..))
+import Control.Category.Hask.Definition (NatTrans(..))
 
 
 naturalityWith :: (Functor f, Functor g) => (g b -> g b -> Bool) -> NatTrans f g -> (a -> b) -> f a -> Bool

@@ -2,7 +2,7 @@ module Test.Category.Properties.Monad where
 
 import Test.QuickCheck
 import Test.QuickCheck.Function
-import qualified Test.Category.Laws.Monad as Laws
+import qualified Control.Category.Hask.Laws.Monad as Laws
 
 etaNaturalityWith gen_fab gen_a eq =
   forAll gen_fab $ \(Fun _ fab) ->

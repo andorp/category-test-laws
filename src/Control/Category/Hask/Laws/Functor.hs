@@ -1,4 +1,4 @@
-module Test.Category.Laws.Functor where
+module Control.Category.Hask.Laws.Functor where
 
 
 identityWith :: (Functor f) => (f a -> f a -> Bool) -> f a -> Bool

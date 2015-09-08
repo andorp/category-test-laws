@@ -7,7 +7,7 @@ name:                category-test-laws
 -- PVP summary:      +-+------- breaking API changes
 --                   | | +----- non-breaking API additions
 --                   | | | +--- code changes with no API change
-version:             0.1.0.0
+version:             0.2.0.0
 
 synopsis:            Algebraic laws and quickcheck properties of haskell constructions.
 
@@ -33,11 +33,11 @@ source-repository head
 
 library
   exposed-modules:
-    Test.Category.Hask,
-    Test.Category.Definitions,
-    Test.Category.Laws.Functor,
-    Test.Category.Laws.NatTrans,
-    Test.Category.Laws.Monad,
+    Control.Category.Hask.Functor,
+    Control.Category.Hask.Definition,
+    Control.Category.Hask.Laws.Functor,
+    Control.Category.Hask.Laws.NatTrans,
+    Control.Category.Hask.Laws.Monad,
     Test.Category.Properties.Functor,
     Test.Category.Properties.NatTrans,
     Test.Category.Properties.Monad

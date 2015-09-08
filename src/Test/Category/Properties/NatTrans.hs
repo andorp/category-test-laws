@@ -3,8 +3,8 @@ module Test.Category.Properties.NatTrans where
 
 import Test.QuickCheck
 import Test.QuickCheck.Function
-import qualified Test.Category.Laws.NatTrans as Laws
-import Test.Category.Definitions (NatTrans(..))
+import qualified Control.Category.Hask.Laws.NatTrans as Laws
+import Control.Category.Hask.Definition (NatTrans(..))
 
 naturalityWith
   :: (Functor f, Functor g, Show a, Show b, Show (f a))

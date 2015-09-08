@@ -1,4 +1,4 @@
-module Test.Category.Hask where
+module Control.Category.Hask.Functor where
 
 -- Syntactic representation of the Hask category, as
 -- it is hidden in many definitions, but we need to have

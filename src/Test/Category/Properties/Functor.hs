@@ -2,7 +2,7 @@ module Test.Category.Properties.Functor where
 
 import Test.QuickCheck
 import Test.QuickCheck.Function
-import qualified Test.Category.Laws.Functor as Laws
+import qualified Control.Category.Hask.Laws.Functor as Laws
 
 identityWith gen_fa eq = forAll gen_fa (Laws.identityWith eq)
 

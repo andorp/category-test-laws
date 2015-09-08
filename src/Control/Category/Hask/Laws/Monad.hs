@@ -1,9 +1,9 @@
-module Test.Category.Laws.Monad where
+module Control.Category.Hask.Laws.Monad where
 
 import Control.Monad (join)
 
-import Test.Category.Hask
-import Test.Category.Laws.NatTrans
+import Control.Category.Hask.Functor
+import Control.Category.Hask.Laws.NatTrans
 
 -- Monad is a functor equipped with two natural transformations
 
