@@ -19,7 +19,6 @@ newtype F2 f a = F2 { unF2 :: f (f a) }
 instance Functor f => Functor (F2 f) where
   fmap f (F2 ffx) = F2 (fmap (fmap f) ffx)
 
-
 -- Composition of functors
 
 newtype FC f g a = FC { unFC :: f (g a) }

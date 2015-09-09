@@ -1,11 +1,11 @@
 {-# LANGUAGE FunctionalDependencies #-}
-{-# LANGUAGE MultiParamTypeClasses #-}
-{-# LANGUAGE Rank2Types #-}
+{-# LANGUAGE MultiParamTypeClasses  #-}
+{-# LANGUAGE Rank2Types             #-}
 module Control.Category.Hask.Definition where
 
-import Control.Applicative
-import Control.Monad (ap)
-import Control.Category.Hask.Functor (FC(..))
+import           Control.Applicative
+import           Control.Category.Hask.Functor (FC (..))
+import           Control.Monad                 (ap)
 
 -- Objects of the Hask are the types
 type Object a = a
@@ -38,4 +38,3 @@ instance Adjoint ((,) a) ((->) a) where
 
 -- Now this is isomorp to the state monad
 type State s = FC ((->) s) ((,) s)
-

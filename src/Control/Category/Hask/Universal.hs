@@ -1,21 +1,19 @@
-{-# LANGUAGE EmptyCase #-}
+{-# LANGUAGE EmptyCase      #-}
 {-# LANGUAGE EmptyDataDecls #-}
 {-# LANGUAGE KindSignatures #-}
-{-# LANGUAGE LambdaCase #-}
+{-# LANGUAGE LambdaCase     #-}
 module Control.Category.Hask.Universal where
 
 -- Universal constructions/properties in the Hask category
-
--- NOTE: The uniqueness of this function can not be tested via the quickcheck
 
 
 -- The initial object of the Hask is a type without any value
 data Initial
 
 -- There exist only one morphism from the initial object to any other object
+-- NOTE: The uniqueness of this function can not be tested via the quickcheck
 uniqueInitial :: Initial -> a
 uniqueInitial = \case
-
 
 -- The final object of the Hask is a type with only one value
 data Final = Final
@@ -23,9 +21,9 @@ data Final = Final
 
 -- There exist only one mprphishm from any object a to a final object
 -- which is a constant function.
+-- NOTE: The uniqueness of this function can not be tested via the quickcheck
 uniqueFinal :: a -> Final
 uniqueFinal _ = Final
-
 
 class Product (prod :: * -> * -> *) where
   projLeft  :: prod a b -> a
@@ -37,7 +35,6 @@ instance Product (,) where
   projRight     = snd
   product f g c = (f c, g c)
 
-
 class CoProduct (coProd :: * -> * -> *) where
   inclLeft  :: a -> coProd a b
   inclRight :: b -> coProd a b
@@ -47,4 +44,3 @@ instance CoProduct Either where
   inclLeft  = Left
   inclRight = Right
   coProduct = either
-

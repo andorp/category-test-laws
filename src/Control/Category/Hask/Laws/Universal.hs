@@ -47,7 +47,6 @@ data CoProductT cp = CoProductT {
 mkCoProductT :: (CoProduct coProd) => coProd a b -> CoProductT coProd
 mkCoProductT _type = CoProductT coProduct inclLeft inclRight
 
-
 coProductCommutesLeftTWith eq f g a cp  = f a `eq` (coProductT cp f g (inclLeftT cp a))
 coProductCommutesRightTWith eq f g b cp = g b `eq` (coProductT cp f g (inclRightT cp b))
 
